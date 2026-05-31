@@ -83,7 +83,7 @@ SF:ection:\x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Re
 SF:quest\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,2F,"HTTP
 SF:/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(DNSS
 SF:tatusRequestTCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x
-SF:20close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConn
+                                                      SF:20close\r\n\r\n")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConn
 SF:ection:\x20close\r\n\r\n")%r(SSLSessionReq,2F,"HTTP/1\.1\x20400\x20Bad\
 SF:x20Request\r\nConnection:\x20close\r\n\r\n");
 Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
@@ -105,4 +105,17 @@ Nmap done: 1 IP address (1 host up) scanned in 40.23
 seconds
 ```
 The website on port 80 is the follo
-This is the
+This is the wesite and it gives a lot of information for us, for example, there is an open port 6274 that is being used fot mcp hadling and also an internal porta that might be of use later:
+<img width="1919" height="707" alt="image" src="https://github.com/user-attachments/assets/2daa2d39-c37c-46b7-8a4a-3bcec10d5464" />
+
+Port 6374 gives us this:
+<img width="1918" height="782" alt="image" src="https://github.com/user-attachments/assets/3c5fe000-fdee-4473-a269-9dd9935d8a77" />
+
+We can find the version for MCP jam:
+<img width="1684" height="774" alt="image" src="https://github.com/user-attachments/assets/60bd28f3-3e4f-4b49-b9c4-14487797a476" />
+
+
+
+
+
+

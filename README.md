@@ -1,5 +1,5 @@
 # DevHub-HTB
-'''text
+'''bash
 sudo nmap -T4 --min-rate 1000 -A -sC -p22,80,6274 devhub.htb
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-05-31 08:43 -0300
 Nmap scan report for devhub.htb (10.129.9.109)

